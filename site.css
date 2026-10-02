@@ -30,3 +30,12 @@ th,td{border:1px solid var(--edge);padding:8px 10px;text-align:left;vertical-ali
 code{font-size:.9em;background:var(--main-soft);padding:1px 5px;border-radius:6px}
 .foot{border-top:1px solid var(--edge);color:var(--muted);font-size:15px}
 .foot-in{padding-block:22px 34px;display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between}
+.signup{margin:8px 0 24px;max-width:560px}
+.signup label{display:block;font-weight:600;margin:0 0 8px}
+.signup-row{display:flex;flex-wrap:wrap;gap:10px}
+.signup input{flex:1 1 240px;min-height:54px;padding:0 16px;font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--edge);border-radius:14px}
+.signup button{min-height:54px;padding:0 24px;font:600 17px "Figtree",sans-serif;color:#fff;background:var(--main);border:0;border-radius:14px;cursor:pointer}
+@media (prefers-color-scheme:dark){.signup button{color:#2A0714}}
+.fine{font-size:15px;color:var(--muted)}
+.launch{background:var(--main-soft);border-radius:18px;padding:16px 20px;margin:0 0 24px}
+.launch p{margin:0}
