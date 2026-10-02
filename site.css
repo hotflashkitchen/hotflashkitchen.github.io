@@ -43,5 +43,15 @@ code{font-size:.9em;background:var(--main-soft);padding:1px 5px;border-radius:6p
 .signup button{min-height:54px;padding:0 24px;font:600 17px "Figtree",sans-serif;color:#fff;background:var(--main);border:0;border-radius:14px;cursor:pointer}
 @media (prefers-color-scheme:dark){.signup button{color:#2A0714}}
 .fine{font-size:15px;color:var(--muted)}
-.launch{background:var(--main-soft);border-radius:18px;padding:16px 20px;margin:0 0 24px}
-.launch p{margin:0}
+.launch{background:var(--main-soft);border-radius:18px;padding:16px 20px;margin:0 0 24px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
+.launch p{margin:0;flex:1 1 220px}
+/* Actions are buttons, not underlined links (the app's rule): large, filled, in the brand color,
+   the full width of a phone. .btn-row lays several side by side on wider screens. */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 28px;border-radius:14px;background:var(--main);color:#fff;font:600 18px "Figtree",sans-serif;text-decoration:none;text-align:center}
+.btn:hover{filter:brightness(1.06)}
+.btn:focus-visible{outline:3px solid var(--main-text);outline-offset:3px}
+@media (prefers-color-scheme:dark){.btn{color:#2A0714}}
+.btn-lead{margin:4px 0 28px}
+.btn-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:8px 0 28px;max-width:720px}
+.btn-row .btn{padding:0 12px;white-space:nowrap}
+@media (max-width:600px){.btn,.btn-lead{width:100%}.btn-row{grid-template-columns:1fr}}

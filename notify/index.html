@@ -12,18 +12,25 @@
 <header class="top"><div class="top-in"><a class="brand" href="/">Hot Flash Kitchen<i aria-hidden="true"></i></a><nav><a href="/">Support</a><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-use/">Terms of Use</a></nav></div></header>
 <main class="page">
 <h1>Be first in the kitchen.</h1>
-<p>Hot Flash Kitchen launches on World Menopause Day, October 18. Leave your email and we&#39;ll tell you the moment it&#39;s out.</p>
-<form class="signup" action="https://app.kit.com/forms/KIT_FORM_ID/subscriptions" method="post">
-<label for="email">Your email</label>
+<p>Be first to know on launch day.</p>
+<div class="btn-row">
+<a class="btn" href="https://instagram.com/hotflashkitchenapp" target="_blank" rel="noopener">Follow on Instagram</a>
+<a class="btn" href="https://www.tiktok.com/@hotflashkitchen" target="_blank" rel="noopener">Follow on TikTok</a>
+<a class="btn" href="https://facebook.com/hotflashkitchen" target="_blank" rel="noopener">Follow on Facebook</a>
+</div>
+<form class="signup" action="https://app.kit.com/forms/KIT_FORM_ID/subscriptions" method="post" hidden>
+<label for="email">Or get one email when it's out</label>
 <div class="signup-row"><input id="email" name="email_address" type="email" autocomplete="email" required placeholder="you@example.com"><button type="submit">Get notified</button></div>
 <p class="fine">We&#39;ll email you when the app is out, plus the occasional kitchen update. Unsubscribe any time. See our <a href="/privacy-policy/">Privacy Policy</a>.</p>
 </form>
-<p class="fine signup-soon" hidden>Signup opens soon. Check back in a day or two.</p>
 <script>
-// Until the Kit form exists, show "opens soon" instead of a form that can't send.
-if (document.querySelector(".signup").action.includes("KIT_FORM_ID")) {
-  document.querySelector(".signup").hidden = true;
-  document.querySelector(".signup-soon").hidden = false;
+// The email signup, off until the Kit form exists (it's on hold for now). WHEN KIT IS READY: put the
+// form's ID between the quotes on the next line (the number from Kit's Publish > Embed > HTML), then push.
+var KIT_FORM_ID = "";
+if (KIT_FORM_ID) {
+  var form = document.querySelector(".signup");
+  form.action = "https://app.kit.com/forms/" + KIT_FORM_ID + "/subscriptions";
+  form.hidden = false;
 }
 </script>
 </main>
