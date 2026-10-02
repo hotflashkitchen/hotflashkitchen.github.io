@@ -11,7 +11,13 @@ body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.6 "Figtree",-
 .top-in,.page,.foot-in{max-width:720px;margin:0 auto;padding-inline:20px}
 .top-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 20px;padding-block:14px}
 .brand{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:22px;color:var(--main-text);text-decoration:none}
-.brand i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--sun);margin-left:6px;vertical-align:middle}
+/* The shared header: the app icon (the warm bowl, /logo.svg) before the name, on every page that uses
+   the header (class="brand"), so new pages get it too. Legal pages (body class="legal") show it smaller. */
+.brand{display:inline-flex;align-items:center;gap:10px}
+.brand::before{content:"";flex:none;width:40px;height:40px;background:url(/logo.svg) center/contain no-repeat}
+.brand i{display:none}
+.legal .brand{font-size:19px;gap:8px}
+.legal .brand::before{width:28px;height:28px}
 nav{display:flex;flex-wrap:wrap;gap:6px 16px}
 nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:16px;padding:4px 0;border-bottom:2px solid transparent}
 nav a[aria-current]{color:var(--main-text);border-color:var(--main)}
