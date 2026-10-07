@@ -57,3 +57,6 @@ code{font-size:.9em;background:var(--main-soft);padding:1px 5px;border-radius:6p
 .btn-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:8px 0 28px;max-width:720px}
 .btn-row .btn{padding:0 12px;white-space:nowrap}
 @media (max-width:600px){.btn{width:100%}.btn-row{grid-template-columns:1fr}}
+/* The mission line, as a quote under the logo (Oct 7). */
+.mission{margin:0 0 28px;padding:4px 0 4px 18px;border-left:4px solid var(--main)}
+.mission p{margin:0;max-width:none;font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:500;font-size:24px;line-height:1.35;color:var(--head)}
