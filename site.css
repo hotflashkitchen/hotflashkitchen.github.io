@@ -49,12 +49,12 @@ code{font-size:.9em;background:var(--main-soft);padding:1px 5px;border-radius:6p
 .launch p strong{color:inherit;font-weight:600}
 .launch .btn{font-size:20px;min-width:280px}
 /* Actions are buttons, not underlined links (the app's rule): large, filled, in the brand color,
-   the full width of a phone. .btn-row lays several side by side on wider screens. */
+   the full width of a phone. .btn-row lays them two by two on wider screens (four follow buttons, Oct 10). */
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 28px;border-radius:14px;background:var(--main);color:#fff;font:600 18px "Plus Jakarta Sans",system-ui,sans-serif;text-decoration:none;text-align:center}
 .btn:hover{filter:brightness(1.06)}
 .btn:focus-visible{outline:3px solid var(--main-text);outline-offset:3px}
 @media (prefers-color-scheme:dark){.btn{color:#2A0714}}
-.btn-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:8px 0 28px;max-width:720px}
+.btn-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:8px 0 28px;max-width:720px}
 .btn-row .btn{padding:0 12px;white-space:nowrap}
 @media (max-width:600px){.btn{width:100%}.btn-row{grid-template-columns:1fr}}
 /* The mission line, as a quote under the logo (Oct 7). */
