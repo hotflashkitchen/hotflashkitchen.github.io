@@ -48,6 +48,15 @@ code{font-size:.9em;background:var(--main-soft);padding:1px 5px;border-radius:6p
 .launch p{margin:0;max-width:none;font-family:"Playfair Display",Georgia,serif;font-weight:600;font-size:24px;line-height:1.25;color:var(--head)}
 .launch p strong{color:inherit;font-weight:600}
 .launch .btn{font-size:20px;min-width:280px}
+/* From the release: the app icon and Apple's official badge side by side, both links to the App Store. The badge is
+   only scaled (54px tall, over Apple's 40px minimum), with more than a quarter of its height clear around it. */
+.store-links{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:24px}
+.store-links a{display:block;line-height:0;border-radius:18px}
+.store-links a:focus-visible{outline:3px solid var(--main-text);outline-offset:4px}
+.store-icon img{width:80px;height:80px;border-radius:18px}
+.store-badge img{height:54px;width:auto}
+/* The small Android line under the badge (from the release; no date). */
+.launch p.android{margin:-6px 0 0;font-family:"Plus Jakarta Sans",system-ui,sans-serif;font-weight:500;font-size:16px;line-height:1.45;color:var(--muted)}
 /* Actions are buttons, not underlined links (the app's rule): large, filled, in the brand color,
    the full width of a phone. .btn-row lays them two by two on wider screens (four follow buttons, Oct 10). */
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 28px;border-radius:14px;background:var(--main);color:#fff;font:600 18px "Plus Jakarta Sans",system-ui,sans-serif;text-decoration:none;text-align:center}
