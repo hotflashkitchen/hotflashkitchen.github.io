@@ -10,10 +10,12 @@
 // to the App Store. A bio link adds ?from=<platform> and a paid ad ?from=<platform>-ad, so App Store Connect counts
 // each as its own campaign (bio-tiktok, ad-tiktok...). From Nov 3 a paid ad links ?from=ad-<name> (Meta's Launch A:
 // ?from=ad-launch-a) and counts as the campaign <name> (ct=launch-a). Nothing is recorded here: the tag is the count.
+// From Nov 4 an ad for an offer code (REDEEM) goes straight to Apple's redemption link for its code.
 var LIVE = true;
 var AD = location.search.match(/[?&]from=ad-([a-z0-9][a-z0-9-]{0,39})(?:&|$)/) || [];
 var FROM = location.search.match(/[?&]from=(tiktok|instagram|facebook|youtube)(-ad|-story)?(?:&|$)/) || [];
-var APP_STORE = "https://apps.apple.com/app/apple-store/id6818412629?pt=129544938&ct=" + (AD[1] ? AD[1] : FROM[1] ? (FROM[2] === "-ad" ? "ad-" : FROM[2] === "-story" ? "story-" : "bio-") + FROM[1] : "get-direct") + "&mt=8";
+var REDEEM = {"free-week-a":"https://apps.apple.com/redeem?ctx=offercodes&id=6818412629&code=HFWEEK"};
+var APP_STORE = AD[1] && Object.prototype.hasOwnProperty.call(REDEEM, AD[1]) ? REDEEM[AD[1]] : "https://apps.apple.com/app/apple-store/id6818412629?pt=129544938&ct=" + (AD[1] ? AD[1] : FROM[1] ? (FROM[2] === "-ad" ? "ad-" : FROM[2] === "-story" ? "story-" : "bio-") + FROM[1] : "get-direct") + "&mt=8";
 if (LIVE) location.replace(APP_STORE);
 </script>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
