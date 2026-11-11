@@ -12,7 +12,7 @@
 <header class="top"><div class="top-in"><a class="brand" href="/">Hot Flash Kitchen<i aria-hidden="true"></i></a><nav><a href="/">Support</a><a href="/privacy-policy/" aria-current="page">Privacy Policy</a><a href="/terms-of-use/">Terms of Use</a></nav></div></header>
 <main class="page">
 <h1>Hot Flash Kitchen Privacy Policy</h1>
-<p><strong>Effective date:</strong> November 6, 2026</p>
+<p><strong>Effective date:</strong> November 11, 2026</p>
 <p>This policy covers the Hot Flash Kitchen app (&quot;the app&quot;, &quot;we&quot;, &quot;us&quot;) and explains what it does with
 information. The short version: <strong>what you enter stays on your phone.</strong> Only what&#39;s needed to link
 two phones and to check your plan goes online, plus a few anonymous daily counts of how far new users
@@ -48,28 +48,39 @@ meals they make, order or save, and their alert settings</li>
 Your phone&#39;s own backups (such as iCloud Backup) include the app&#39;s data if you have them turned on,
 under Apple&#39;s terms.</p>
 <h2>What goes online, and why</h2>
-<p>Only the items below leave your phone on their own, and only to make two things work: linking your
-phone with your partner&#39;s, and checking whether your plan is active, plus the anonymous counts in item 4.</p>
-<p><strong>1. Linking two phones: Google Firebase</strong></p>
+<p>Only the items below leave your phone on their own, and only to make these work: linking your phone
+with your partner&#39;s, checking whether your plan is active and keeping it yours, and checking that
+requests come from the real app, plus the anonymous counts in item 4.</p>
+<p><strong>1. Your plan&#39;s record, and linking two phones: Google Firebase</strong></p>
 <ul>
-<li><strong>An anonymous ID for each phone that uses linking:</strong> yours once you&#39;ve added a partner, and your
-partner&#39;s once they enter your code. It&#39;s a random code, not tied to your name, email or phone
-number. If you use the app just for yourself, nothing goes to Firebase.</li>
-<li><strong>The link record:</strong> a random household ID and the anonymous IDs of the linked phones (just yours
-until your partner joins).</li>
+<li><strong>An anonymous ID for each phone:</strong> yours once you have a plan or have set the app up for the two
+of you, and your partner&#39;s once they enter your code. It&#39;s a random code, not tied to your name,
+email or phone number. Before you have a plan, no record of yours is kept in Firebase; only the
+anonymous counts (item 4) and the settings read below go there.</li>
+<li><strong>The household record:</strong> a random household ID and the anonymous IDs of the people in it (just
+yours unless a partner joins). It is what keeps your plan yours: nobody can join your household
+without a code from you. Nothing about your phone itself is in it. When you say Yes to a partner,
+the invite code they used is noted on the record for a moment, as proof of the invitation, and
+then removed.</li>
 <li><strong>The invite code:</strong> the code, your anonymous ID and household ID, and when it was made and
 expires. Each code works once and expires after 48 hours; it&#39;s deleted once it&#39;s used or replaced.</li>
 <li><strong>Your partner&#39;s first name, briefly.</strong> When your partner enters your code, the first name they
 type goes with their request so you can confirm it&#39;s them. It&#39;s deleted as soon as you answer, or
 if your partner withdraws the request. If you don&#39;t answer, the code expires after 48 hours and the
 request is deleted no later than the next time either of your phones opens the app.</li>
+<li><strong>A check that it&#39;s really the app:</strong> Firebase App Check, with Apple&#39;s App Attest, checks that each
+request the app makes to Firebase (the records above, the settings and the counts) comes from the
+real app on a real iPhone. Apple and Google carry out that check. It holds nothing about you, your
+meals or how you feel.</li>
+<li><strong>A few settings of ours:</strong> the app reads a handful of settings from Firebase (for example, which
+plan option shows first). The request carries no ID of yours; only the technical data below.</li>
 <li><strong>Technical data Firebase logs automatically:</strong> the phone&#39;s IP address and basic device details
 (such as the operating system version and which Firebase software versions the app uses), which Firebase keeps for a few weeks to protect against
 misuse.</li>
 </ul>
 <p><strong>2. Your plan: RevenueCat</strong></p>
 <ul>
-<li><strong>An ID for your plan:</strong> your random household ID (the same one that names your link record) with
+<li><strong>An ID for your plan:</strong> your random household ID (the same one that names your household record) with
 &quot;-plan&quot; added, so a partner plan can cover both phones. Before linking, your partner&#39;s phone uses a random ID from
 RevenueCat.</li>
 <li><strong>Your purchase history for this app,</strong> as Apple reports it: which plan, when it started and
@@ -126,8 +137,13 @@ law requires it, to protect people&#39;s safety, or as part of a sale or transfe
 case this policy still applies to what was collected under it).</p>
 <h2>How long it&#39;s kept</h2>
 <ul>
-<li><strong>The link record and your anonymous ID:</strong> until you unlink or remove your partner, or until you
-ask us to delete them.</li>
+<li><strong>The household record and your anonymous ID:</strong> until you unlink, tap &quot;Delete my data&quot;, or ask us
+to delete them. After an unlink, while you have a plan, a new record with a new anonymous ID is
+made; after &quot;Delete my data&quot;, a new one is made only if you set the app up again with a plan.
+Removing a partner who was never linked, or switching to &quot;Just me&quot;, takes your partner and your
+invite codes off the record; if you have a record, it and your anonymous ID stay (without one,
+your anonymous ID is deleted). A record isn&#39;t removed just because a plan ends, or when you delete
+the app.</li>
 <li><strong>Invite codes:</strong> until used, replaced, or 48 hours pass.</li>
 <li><strong>Your partner&#39;s first name on a request:</strong> until you answer or your partner withdraws it. If the
 code expires first, until either of your phones next opens the app.</li>
@@ -162,14 +178,18 @@ work the same way, on the partner&#39;s phone. Turn them off in the app or in yo
 <ul>
 <li><strong>Everything on your phone:</strong> delete the app. To erase just your check-ins (how you felt and your
 meal ratings), tap &quot;Erase my check-ins&quot; on your Me tab.</li>
-<li><strong>Everything at once:</strong> tap &quot;Delete my data&quot; on your Me tab. After it asks, it deletes your link
-record, any invite codes and your anonymous ID from Firebase (which disconnects the other phone)
-and everything the app saved on your phone, then starts over. It doesn&#39;t cancel a subscription;
+<li><strong>Everything at once:</strong> tap &quot;Delete my data&quot; on your Me tab. After it asks, it deletes your
+household record, any invite codes and your anonymous ID from Firebase (which disconnects the
+other phone) and everything the app saved on your phone, then starts over. If you set the app up
+again with a plan, a new record is made then. It doesn&#39;t cancel a subscription;
 the same card opens your Apple subscription settings.</li>
 <li><strong>The link:</strong> tap Unlink on your Me tab (your partner can do the same on theirs). This deletes the
-link record, any invite code and that phone&#39;s anonymous ID from Firebase right away, and
-disconnects the other phone. Removing a partner who was never linked, or switching to &quot;Just me&quot;,
-deletes your invite codes, link record and anonymous ID the same way.</li>
+household record, any invite code and that phone&#39;s anonymous ID from Firebase right away, and
+disconnects the other phone. While you have a plan, your phone then gets a new record with a new
+anonymous ID and no partner on it. Removing a partner who was never linked, or switching to &quot;Just
+me&quot;, deletes your invite codes and takes your partner off your record; if you have a record, it
+and your anonymous ID stay (they are what keeps the plan yours), and without one your anonymous ID
+is deleted. To remove a record too, use &quot;Delete my data&quot;.</li>
 <li><strong>Purchase history at RevenueCat:</strong> email <a href="mailto:hotflashkitchenapp@gmail.com">hotflashkitchenapp@gmail.com</a> with your Support ID (at the
 bottom of your Me tab) and we&#39;ll delete it. This doesn&#39;t cancel a subscription; to cancel, go to
 your Apple Account settings.</li>
@@ -186,7 +206,7 @@ treat you differently for using these rights.</p>
 <p><strong>Do Not Track:</strong> the app doesn&#39;t track you across apps or websites, so there&#39;s nothing for a
 Do Not Track signal to turn off.</p>
 <h2>Security</h2>
-<p>Information that goes online is sent encrypted (HTTPS). The link records are protected so each
+<p>Information that goes online is sent encrypted (HTTPS). The household records are protected so each
 phone can reach only its own household&#39;s record. No system is perfectly secure, but we keep what&#39;s
 online as small as possible so there&#39;s little to protect.</p>
 <h2>Where it&#39;s processed</h2>
