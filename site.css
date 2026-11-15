@@ -72,3 +72,32 @@ code{font-size:.9em;background:var(--main-soft);padding:1px 5px;border-radius:6p
 /* The mission line, as a quote under the logo (Oct 7). */
 .mission{margin:0 0 28px;padding:4px 0 4px 18px;border-left:4px solid var(--main)}
 .mission p{margin:0;max-width:none;font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:500;font-size:24px;line-height:1.35;color:var(--head)}
+/* Nov 15 (the owner): the home page's hero, the call to action on every page, How it works, the meal ideas. On a phone the
+   headline, the offer line and Apple's badge sit above the fold; the photo follows. */
+img{max-width:100%;height:auto}
+.hero{display:grid;gap:22px;align-items:center;margin:0 0 30px}
+@media (min-width:760px){.hero{grid-template-columns:1.15fr .85fr;gap:36px}}
+.hero h1{font-size:34px;margin:0 0 12px}
+@media (min-width:760px){.hero h1{font-size:44px}}
+.offer{font-weight:700;font-size:19px;line-height:1.45;color:var(--main-text);margin:0 0 16px;max-width:none}
+.hero-img{width:100%;max-width:400px;justify-self:center;border-radius:24px}
+.cta{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin:0 0 24px}
+.cta-bottom{align-items:center;text-align:center;background:var(--main-soft);border-radius:18px;padding:24px 20px;margin:36px 0 12px}
+.cta .store-badge{display:inline-block;line-height:0;border-radius:10px}
+.cta .store-badge:focus-visible{outline:3px solid var(--main-text);outline-offset:4px}
+.cta .store-badge img{height:54px;width:auto}
+.cta-line{margin:0;font-weight:700;font-size:18px;color:var(--ink);max-width:none}
+.cta-line span{font-weight:500;color:var(--muted)}
+.how{padding-left:24px}
+.how li{margin:0 0 10px}
+.meal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:12px 0 18px}
+@media (min-width:760px){.meal-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.meal-card{display:flex;flex-direction:column;gap:2px;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--edge);border-radius:16px;overflow:hidden}
+.meal-card:focus-visible{outline:3px solid var(--main-text);outline-offset:3px}
+.meal-card img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.meal-name{font-weight:700;font-size:16px;line-height:1.3;padding:8px 12px 0}
+.meal-meta{font-size:16px;color:var(--muted);padding:0 12px 12px}
+.meal-photo{width:100%;max-width:520px;border-radius:20px;display:block;margin:0 0 18px}
+.facts{list-style:none;padding:0}
+.crumb{margin:0 0 8px;font-size:16px}
+.help{text-align:center;max-width:none}
