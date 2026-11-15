@@ -30,7 +30,7 @@
 <section class="hero">
 <div class="hero-text">
 <h1>Perimenopause meal ideas for how you feel</h1>
-<p class="offer" id="offer" data-after="Try it free for 7 days, then an introductory price from $4.99/month.">Black Friday special: try it free for 7 days, then an introductory price from $4.99/month.</p><script>(function(){var e=document.getElementById("offer");if(e&&Date.now()>=Date.parse("2026-12-02T10:00:00.000Z"))e.textContent=e.getAttribute("data-after");})();</script>
+<p class="offer" id="offer" data-switch="[[&quot;2000-01-01&quot;,&quot;Black Friday special: try it free for 7 days, then an introductory price from $4.99/month.&quot;],[&quot;2026-12-02&quot;,&quot;Try it free for 7 days, then an introductory price from $4.99/month.&quot;],[&quot;2027-01-12&quot;,&quot;Try it free for 7 days.&quot;]]">Try it free for 7 days.</p>
 <div class="cta cta-top"><a class="store-badge" href="https://apps.apple.com/app/apple-store/id6818412629?pt=129544938&ct=website-home&mt=8"><img src="/app-store-badge.svg" alt="Get Hot Flash Kitchen on the App Store" height="54"></a><p class="cta-line">Try it free for 7 days<span> · iPhone, US only</span></p></div>
 </div>
 <img class="hero-img" src="/img/hero.jpg" alt="A hand holding an iPhone with Hot Flash Kitchen's check-in screen" width="800" height="1000">
@@ -59,6 +59,7 @@
 <div class="cta cta-bottom"><a class="store-badge" href="https://apps.apple.com/app/apple-store/id6818412629?pt=129544938&ct=website-home&mt=8"><img src="/app-store-badge.svg" alt="Get Hot Flash Kitchen on the App Store" height="54"></a><p class="cta-line">Try it free for 7 days<span> · iPhone, US only</span></p></div>
 <p class="help">Questions? <a href="/support/">Support and contact</a></p>
 </main>
+<script>(function(){var d=new Date(Date.now()-36e6).toISOString().slice(0,10);var a=document.querySelectorAll("[data-switch]");for(var i=0;i<a.length;i++){var s=JSON.parse(a[i].getAttribute("data-switch")),t=null;for(var j=0;j<s.length;j++)if(d>=s[j][0])t=s[j][1];if(t!==null)a[i].textContent=t;}})();</script>
 <footer class="foot"><div class="foot-in"><span>© 2026 Hot Flash Kitchen</span><a href="/consumer-health-data/">Consumer Health Data Privacy Policy</a><a href="mailto:hotflashkitchenapp@gmail.com">hotflashkitchenapp@gmail.com</a></div></footer>
 </body>
 </html>
