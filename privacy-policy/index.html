@@ -98,8 +98,8 @@ misuse.</li>
 <p><strong>2. Your plan: RevenueCat</strong></p>
 <ul>
 <li><strong>An ID for your plan:</strong> your random household ID (the same one that names your household record) with
-&quot;-plan&quot; added, so a partner plan can cover both phones. Before linking, your partner&#39;s phone uses a random ID from
-RevenueCat.</li>
+&quot;-plan&quot; added, so a partner plan can cover both phones. Before linking, and after an unlink, your partner&#39;s phone uses
+a random ID of its own, made on that phone and ending in &quot;-partner&quot;.</li>
 <li><strong>Your purchase history for this app,</strong> as Apple reports it: which plan, when it started and
 renews, the price and store country, Apple&#39;s transaction IDs, and whether it&#39;s active.</li>
 <li><strong>Technical data</strong> RevenueCat&#39;s service receives when checking your plan: the app version, device
@@ -110,6 +110,8 @@ tracking or advertising.</li>
 <li><strong>Two notes about the app, kept with your plan:</strong> the app&#39;s version, and whether this copy of the
 app came from the App Store or is a test build. They let us tell customers&#39; plans from our own
 test purchases. They are set by the phone that holds the plan, never by a partner&#39;s phone.</li>
+<li><strong>On a partner&#39;s phone,</strong> the same two notes and a third that says it&#39;s a partner&#39;s phone, kept with that phone&#39;s own
+random ID only (never with your plan&#39;s), so we can tell partners&#39; phones from subscribers&#39; in our numbers.</li>
 <li><strong>Whether one of our App Store ads led to the download.</strong> We advertise the app in the App Store
 (Apple Search Ads). On the phone that holds the plan, the app asks Apple for an attribution token
 (Apple&#39;s AdServices) and hands it to RevenueCat, which asks Apple whether the download followed a
@@ -128,7 +130,10 @@ adds 1 to a few daily counters:</p>
 <li><strong>Usage:</strong> phones opening the app for the first time, seeing the welcome screen, reaching each setup
 screen, finishing setup, making a first check-in, seeing or closing the plan screen, tapping a plan, and
 starting, cancelling or completing a purchase or a free trial, or waiting a long time for one to go
-through.</li>
+through. Also: answering &quot;Who&#39;s this for?&quot;, choosing &quot;I&#39;m the partner&quot; or linking as a partner, Apple&#39;s
+purchase screen opening (or not), a plan turning on (and whether an offer code brought it), the screen
+the app was on if it was put away before setup was finished, and how many setup screens it took (as a
+range, such as &quot;7 or 8&quot;).</li>
 <li><strong>Errors:</strong> a purchase, a Restore or an offer code that ran into an error (the error&#39;s type only, such
 as &quot;network&quot;), and an error in the app itself (only the name of the screen it happened on, such as
 &quot;Today&quot;; never the error&#39;s text, and nothing you entered).</li>
