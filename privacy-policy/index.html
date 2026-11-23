@@ -28,11 +28,11 @@
 <header class="top"><div class="top-in"><a class="brand" href="/">Hot Flash Kitchen<i aria-hidden="true"></i></a><nav><a href="/meal-ideas/">Meal ideas</a><a href="/support/">Support</a><a href="/privacy-policy/" aria-current="page">Privacy Policy</a><a href="/terms-of-use/">Terms of Use</a></nav></div></header>
 <main class="page">
 <h1>Hot Flash Kitchen Privacy Policy</h1>
-<p><strong>Effective date:</strong> November 11, 2026</p>
+<p><strong>Effective date:</strong> the day version 1.0.8 of the app is released</p>
 <p>This policy covers the Hot Flash Kitchen app (&quot;the app&quot;, &quot;we&quot;, &quot;us&quot;) and explains what it does with
 information. The short version: <strong>what you enter stays on your phone.</strong> Only what&#39;s needed to link
 two phones, to check your plan and keep it yours, and to check that requests come from the real app
-goes online, plus a few anonymous daily counts of how far new users get (nothing about you in them). We don&#39;t run ads, we don&#39;t sell or share your
+goes online, plus a few anonymous daily counts of how the app is used and of errors in it (nothing about you in them). The app shows no ads, we don&#39;t sell or share your
 information, and we don&#39;t track you across other apps or websites.</p>
 <p><strong>We&#39;re not a HIPAA-covered entity.</strong> Hot Flash Kitchen isn&#39;t a healthcare provider, health plan or
 healthcare clearinghouse, or a business associate of one, so the federal health privacy law HIPAA
@@ -66,7 +66,8 @@ under Apple&#39;s terms.</p>
 <h2>What goes online, and why</h2>
 <p>Only the items below leave your phone on their own, and only to make these work: linking your phone
 with your partner&#39;s, checking whether your plan is active and keeping it yours, and checking that
-requests come from the real app, plus the anonymous counts in item 4.</p>
+requests come from the real app, plus the anonymous counts in item 4 and, with your plan, the notes in
+item 2 about the app and about our own App Store ads.</p>
 <p><strong>1. Your plan&#39;s record, and linking two phones: Google Firebase</strong></p>
 <ul>
 <li><strong>An anonymous ID for each phone:</strong> yours once you have a plan or have set the app up for the two
@@ -97,8 +98,8 @@ misuse.</li>
 <p><strong>2. Your plan: RevenueCat</strong></p>
 <ul>
 <li><strong>An ID for your plan:</strong> your random household ID (the same one that names your household record) with
-&quot;-plan&quot; added, so a partner plan can cover both phones. Before linking, your partner&#39;s phone uses a random ID from
-RevenueCat.</li>
+&quot;-plan&quot; added, so a partner plan can cover both phones. Before linking, and after an unlink, your partner&#39;s phone uses
+a random ID of its own, made on that phone and ending in &quot;-partner&quot;.</li>
 <li><strong>Your purchase history for this app,</strong> as Apple reports it: which plan, when it started and
 renews, the price and store country, Apple&#39;s transaction IDs, and whether it&#39;s active.</li>
 <li><strong>Technical data</strong> RevenueCat&#39;s service receives when checking your plan: the app version, device
@@ -106,30 +107,55 @@ type, operating system version, your phone&#39;s language and App Store country,
 phone&#39;s identifier for apps from the same developer (Apple&#39;s &quot;identifier for vendor&quot;, which resets
 if you delete every app from us). It isn&#39;t the advertising identifier, and it isn&#39;t used for
 tracking or advertising.</li>
+<li><strong>Two notes about the app, kept with your plan:</strong> the app&#39;s version, and whether this copy of the
+app came from the App Store or is a test build. They let us tell customers&#39; plans from our own
+test purchases. They are set by the phone that holds the plan, never by a partner&#39;s phone.</li>
+<li><strong>On a partner&#39;s phone,</strong> the same two notes and a third that says it&#39;s a partner&#39;s phone, kept with that phone&#39;s own
+random ID only (never with your plan&#39;s), so we can tell partners&#39; phones from subscribers&#39; in our numbers.</li>
+<li><strong>Whether one of our App Store ads led to the download.</strong> We advertise the app in the App Store
+(Apple Search Ads). On the phone that holds the plan, the app asks Apple for an attribution token
+(Apple&#39;s AdServices) and hands it to RevenueCat, which asks Apple whether the download followed a
+tap on one of our ads and, if so, which one: the campaign, ad group and keyword, and the country or
+region. The answer is kept with your plan&#39;s ID. It doesn&#39;t use the advertising identifier, the app
+never asks to track you, and it says nothing about what you do in this app or in any other. We use
+it only to see which of our own ads bring people to the app.</li>
 </ul>
 <p><strong>3. Payment: Apple</strong>
 Subscriptions are sold, billed and refunded by Apple through your Apple Account. We never see your
 payment details. Apple handles this under its own privacy policy.</p>
-<p><strong>4. How far new users get: anonymous daily counts (Google Firebase)</strong>
-So we can see where new users stop before choosing a plan, the app adds 1 to a few daily counters: phones
-opening the app for the first time, seeing the welcome screen, finishing setup, making a first check-in, seeing the plan screen,
-tapping a plan, and starting, cancelling, completing or hitting an error on a purchase (the error&#39;s type
-only, such as &quot;network&quot;). Each counter is one total per day and app version, kept in the same Firebase
-project as the link. Nothing travels with it: no user, device or install ID, no account, no time of day,
-nothing you enter and nothing about how you feel, so a count can&#39;t be tied to you or to your phone. If a
-count can&#39;t be sent, your phone keeps a plain note that it still owes it and tries again the next time
-the app opens.</p>
-<p>That&#39;s everything. Beyond those counts, the app has no analytics, no crash reporting, no advertising, no
-advertising identifier, and no cookies.</p>
+<p><strong>4. Anonymous daily counts: how the app is used, and errors (Google Firebase)</strong>
+So we can see where new users stop before choosing a plan, and where the app runs into trouble, the app
+adds 1 to a few daily counters:</p>
+<ul>
+<li><strong>Usage:</strong> phones opening the app for the first time, seeing the welcome screen, reaching each setup
+screen, finishing setup, making a first check-in, seeing or closing the plan screen, tapping a plan, and
+starting, cancelling or completing a purchase or a free trial, or waiting a long time for one to go
+through. Also: answering &quot;Who&#39;s this for?&quot;, choosing &quot;I&#39;m the partner&quot; or linking as a partner, Apple&#39;s
+purchase screen opening (or not), a plan turning on (and whether an offer code brought it), the screen
+the app was on if it was put away before setup was finished, and whether a plan had turned on by then or
+the plan screen had never shown, and how many setup screens it took (as a range, such as &quot;7 or 8&quot;).</li>
+<li><strong>Errors:</strong> a purchase, a Restore or an offer code that ran into an error (the error&#39;s type only, such
+as &quot;network&quot;), and an error in the app itself (only the name of the screen it happened on, such as
+&quot;Today&quot;; never the error&#39;s text, and nothing you entered).</li>
+</ul>
+<p>Each counter is one total per day, app version and kind of copy (from the App Store, or a test build),
+kept in the same Firebase project as the link. Nothing travels with it: no user, device or install ID, no
+account, no time of day, nothing you enter and nothing about how you feel, so a count can&#39;t be tied to
+you or to your phone. If a count can&#39;t be sent, your phone keeps a plain note that it still owes it and
+tries again the next time the app opens.</p>
+<p>That&#39;s everything. Beyond what&#39;s listed here, the app has no analytics and sends no crash reports: when
+something goes wrong, only the anonymous error counts above are sent, never a report of what happened on
+your phone. The app shows no ads, uses no advertising identifier, and has no cookies.</p>
 <p>These companies process this information for us as service providers, under their own terms:
 <a href="https://firebase.google.com/support/privacy">Firebase privacy</a>,
 <a href="https://www.revenuecat.com/privacy">RevenueCat privacy</a>,
 <a href="https://www.apple.com/legal/privacy/">Apple privacy</a>.</p>
 <h2>How we use it</h2>
 <p>Only to link your phone with your partner&#39;s, let you confirm who&#39;s joining, keep the link working,
-check and restore your plan, protect the service from misuse, and, from the anonymous daily counts, see
-where new users stop before choosing a plan. We don&#39;t use it for advertising,
-profiling or anything else, and we don&#39;t sell or share it. We don&#39;t collect, use, share or sell any
+check and restore your plan, protect the service from misuse, tell customers&#39; plans from our own test
+purchases, see which of our own App Store ads bring people to the app, and, from the anonymous daily
+counts, see where new users stop before choosing a plan and where the app runs into errors. We don&#39;t use
+it to show you ads or to target ads at you, for profiling or anything else, and we don&#39;t sell or share it. We don&#39;t collect, use, share or sell any
 information to train AI models, including large language models.</p>
 <h2>Our launch email list (the website)</h2>
 <p>If you sign up on our website to hear when Hot Flash Kitchen launches, we collect <strong>your email
@@ -166,8 +192,9 @@ code expires first, until either of your phones next opens the app.</li>
 <li><strong>Firebase&#39;s technical logs:</strong> a few weeks.</li>
 <li><strong>The anonymous daily counts:</strong> kept as totals for as long as they&#39;re useful to us. They hold nothing
 about you, so there&#39;s nothing in them to delete.</li>
-<li><strong>Purchase history at RevenueCat:</strong> while you have a plan, and afterward as needed for records,
-unless you ask us to delete it. Apple keeps its own purchase records under its terms.</li>
+<li><strong>Purchase history at RevenueCat, and the notes kept with it</strong> (the app&#39;s version, the kind of copy,
+and whether one of our ads led to the download): while you have a plan, and afterward as needed for
+records, unless you ask us to delete it. Apple keeps its own purchase records under its terms.</li>
 </ul>
 <h2>Links you tap and texts you send</h2>
 <ul>
@@ -206,8 +233,8 @@ anonymous ID and no partner on it. Removing a partner who was never linked, or s
 me&quot;, deletes your invite codes and takes your partner off your record; if you have a record, it
 and your anonymous ID stay (they are what keeps the plan yours), and without one your anonymous ID
 is deleted. To remove a record too, use &quot;Delete my data&quot;.</li>
-<li><strong>Purchase history at RevenueCat:</strong> email <a href="mailto:hotflashkitchenapp@gmail.com">hotflashkitchenapp@gmail.com</a> with your Support ID (at the
-bottom of your Me tab) and we&#39;ll delete it. This doesn&#39;t cancel a subscription; to cancel, go to
+<li><strong>Purchase history at RevenueCat, and the notes kept with it:</strong> email <a href="mailto:hotflashkitchenapp@gmail.com">hotflashkitchenapp@gmail.com</a> with
+your Support ID (at the bottom of your Me tab) and we&#39;ll delete them. This doesn&#39;t cancel a subscription; to cancel, go to
 your Apple Account settings.</li>
 </ul>
 <h2>Your privacy rights</h2>
