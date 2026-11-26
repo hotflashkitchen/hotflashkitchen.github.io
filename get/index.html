@@ -22,7 +22,7 @@ var BIO = location.search.match(/[?&]from=bio-(tiktok|instagram|facebook|youtube
 var GROUP = location.search.match(/[?&]from=(group-(?:0[1-9]|1[0-2])(?:0[1-9]|[12][0-9]|3[01]))(?:&|$)/) || [];
 var PIN = location.search.match(/[?&]from=(pin-[a-z0-9][a-z0-9-]{0,35})(?:&|$)/) || [];
 var FROM = location.search.match(/[?&]from=(tiktok|instagram|facebook|youtube)(-ad|-story)?(?:&|$)/) || [];
-var REDEEM = {"free-week-b":"https://apps.apple.com/redeem?ctx=offercodes&id=6818412629&code=HFWEEK"};
+var REDEEM = {};
 var APP_STORE = AD[1] && Object.prototype.hasOwnProperty.call(REDEEM, AD[1]) ? REDEEM[AD[1]] : "https://apps.apple.com/app/apple-store/id6818412629?pt=129544938&ct=" + (AD[1] ? AD[1] : BIO[1] ? "bio-" + BIO[1] : GROUP[1] ? GROUP[1] : PIN[1] ? PIN[1] : FROM[1] === "facebook" && FROM[2] === "-story" ? "facebook-story" : FROM[1] ? (FROM[2] === "-ad" ? "ad-" : FROM[2] === "-story" ? "story-" : "bio-") + FROM[1] : "get-direct") + "&mt=8";
 if (LIVE) location.replace(APP_STORE);
 </script>
